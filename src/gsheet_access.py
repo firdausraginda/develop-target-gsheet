@@ -3,10 +3,8 @@ from oauth2client.service_account import ServiceAccountCredentials
 from src.config import get_config_item
 import time
 
-scope = ['https://spreadsheets.google.com/feeds',
-         'https://www.googleapis.com/auth/drive']
-creds = ServiceAccountCredentials.from_json_keyfile_name(
-    './target-gsheet/client_secret.json', scope)
+scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
+creds = ServiceAccountCredentials.from_json_keyfile_name('<path-to-client_secret.json>', scope)
 client = gspread.authorize(creds)
 
 # get the instance of the Spreadsheet
