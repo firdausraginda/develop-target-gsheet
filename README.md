@@ -7,6 +7,10 @@ Need to install [singer-python](https://github.com/singer-io/getting-started/blo
 
 `$ pipenv install singer-python`
 
+Need to install **gspread** and **oauth2client** lib:
+
+`$ pipenv install google-api-python-client oauth2client`
+
 Some arguments are **required** to run a tap file:
 
 | Param | Description |
@@ -40,7 +44,13 @@ To install **singer-python**:
 
 `$ pipenv install singer-python`
 
-## 3. Create Scripts
+## 3. Gspread & Oauth2client
+
+To install **gspread** and **oauth2client**:
+
+`$ pipenv install google-api-python-client oauth2client`
+
+## 4. Create Scripts
 
 Detail about every script files:
 
@@ -52,7 +62,7 @@ Detail about every script files:
 | `config.json` | Contain configuration items needed to run target: `spreadsheet_id`, `active_sheet`. | [singer config file docs](https://github.com/singer-io/getting-started/blob/master/docs/CONFIG_AND_STATE.md#config-file) |
 | `client_secret.json` | Contains credentials to connect with spreadsheet. | [create google service account](https://support.google.com/a/answer/7378726?hl=en) |
 
-## 4. Detail about `config.json`
+## 5. Detail about `config.json`
 
 | Item | Description | Is Required? | Reference |
 | --- | --- | --- | --- |
